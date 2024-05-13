@@ -43925,6 +43925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325386067}
   - component: {fileID: 325386068}
+  - component: {fileID: 325386069}
   m_Layer: 0
   m_Name: MainSprite
   m_TagString: Untagged
@@ -43999,6 +44000,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &325386069
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325386066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98240fbd710e0f641837665d09f3a101, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &492994046
 GameObject:
   m_ObjectHideFlags: 0
@@ -44014,6 +44036,7 @@ GameObject:
   - component: {fileID: 492994052}
   - component: {fileID: 492994051}
   - component: {fileID: 492994053}
+  - component: {fileID: 492994054}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -44151,6 +44174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03c50dc7a3a6424293f17e908e1bb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &492994052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44176,6 +44200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitRenderer: {fileID: 325386068}
+--- !u!114 &492994054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492994046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8ecdcc69469d54bbc0a348526449ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -69001,7 +69037,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1951935854}
   - component: {fileID: 1951935853}
-  - component: {fileID: 1951935852}
   m_Layer: 0
   m_Name: World Camera
   m_TagString: MainCamera
@@ -69009,14 +69044,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1951935852
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951935851}
-  m_Enabled: 1
 --- !u!20 &1951935853
 Camera:
   m_ObjectHideFlags: 0

@@ -27,4 +27,10 @@ public class PlayerInputController : UnitController
 
         CallLookEvent(newAim);
     }
+
+    public void OnDash(InputValue value)
+    {
+        bool isDash = value.isPressed;
+        CallDashEvent(isDash);
+    }
 }
