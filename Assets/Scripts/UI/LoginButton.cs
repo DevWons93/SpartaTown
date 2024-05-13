@@ -8,25 +8,24 @@ using UnityEngine.UIElements;
 
 public class LoginButton : MonoBehaviour
 {
-    private GameObject login;
+    private GameObject player;    
     private InputField inputField;
-    private TextMeshProUGUI idText;
-    private string inputText;
+    private TextMeshProUGUI idText;    
 
     private void Awake()
     {
-        login = GameObject.Find("LoginUI");
+        player = GameObject.Find("Player");        
         inputField = GetComponentInChildren<InputField>();
-        idText = GetComponentInChildren<TextMeshProUGUI>();
+        idText = player.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void ButtonClick()
     {
-        inputText = inputField.text;
+        string inputText = inputField.text;
         int length = inputText.Length;
         if (length < 2 || length > 10) return;
 
         idText.text = inputText;
-        login.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }
