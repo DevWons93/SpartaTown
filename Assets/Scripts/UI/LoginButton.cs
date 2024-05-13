@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 
 public class LoginButton : MonoBehaviour
 {
+    [SerializeField] private GameObject menuBar;
+
     private GameObject player;    
     private InputField inputField;
     private TextMeshProUGUI idText;    
@@ -27,5 +29,6 @@ public class LoginButton : MonoBehaviour
 
         idText.text = inputText;
         this.gameObject.SetActive(false);
-    }
+        menuBar.SetActive(true);
+    }    
 }
