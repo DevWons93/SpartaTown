@@ -23,17 +23,22 @@ public class UserList : MonoBehaviour
 
     private void Start()
     {
-        playerText.text = playerNamePlate.text;
+        ChangePlayerName();
 
-        float posY = 440;
-        for(int i = 0; i < userList.Count; i++)
+        float posY = 480;
+        for (int i = 0; i < userList.Count; i++)
         {
             posY -= 40;
             TextMeshPro npcNamePlate = userList[i].GetComponentInChildren<TextMeshPro>();
-            TextMeshProUGUI npcText = Instantiate(playerText);            
+            TextMeshProUGUI npcText = Instantiate(playerText);
             npcText.rectTransform.position = new Vector3(0, posY, 0);
             npcText.text = npcNamePlate.text;
             npcText.transform.SetParent(this.transform, false);
         }
+    }
+
+    private void ChangePlayerName()
+    {
+        playerText.text = playerNamePlate.text;
     }
 }

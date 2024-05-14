@@ -12,7 +12,7 @@ public class LoginButton : MonoBehaviour
 
     private GameObject player;    
     private InputField inputField;
-    private TextMeshPro idText;    
+    private TextMeshPro idText;        
 
     private void Awake()
     {
