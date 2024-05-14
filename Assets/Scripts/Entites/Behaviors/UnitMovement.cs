@@ -45,7 +45,7 @@ public class UnitMovement : MonoBehaviour
 
     private void Dash(bool isPressed)
     {
-        if (movementDirection == Vector2.zero) return; // 이동이 없으면 대쉬 X
+        //if (movementDirection == Vector2.zero) return; // 이동이 없으면 대쉬 X
         boost = isPressed ? 2f : 1f;
     }
 }
