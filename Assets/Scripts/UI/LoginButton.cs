@@ -12,13 +12,13 @@ public class LoginButton : MonoBehaviour
 
     private GameObject player;    
     private InputField inputField;
-    private TextMeshProUGUI idText;    
+    private TextMeshPro idText;    
 
     private void Awake()
     {
         player = GameObject.Find("Player");        
         inputField = GetComponentInChildren<InputField>();
-        idText = player.GetComponentInChildren<TextMeshProUGUI>();
+        idText = player.GetComponentInChildren<TextMeshPro>();
     }
 
     public void ButtonClick()
