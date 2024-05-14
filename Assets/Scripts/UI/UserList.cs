@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class UserList : MonoBehaviour
 {
+    [SerializeField] private LoginButton loginButton;
+
     private GameObject player;
     private List<GameObject> userList;
     private TextMeshPro playerNamePlate;
@@ -24,6 +26,7 @@ public class UserList : MonoBehaviour
     private void Start()
     {
         ChangePlayerName();
+        loginButton.OnChangeIDEvent += ChangePlayerName;
 
         float posY = 480;
         for (int i = 0; i < userList.Count; i++)

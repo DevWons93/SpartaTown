@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,7 +13,8 @@ public class LoginButton : MonoBehaviour
 
     private GameObject player;    
     private InputField inputField;
-    private TextMeshPro idText;        
+    private TextMeshPro idText;
+    public Action OnChangeIDEvent;
 
     private void Awake()
     {
@@ -30,5 +32,12 @@ public class LoginButton : MonoBehaviour
         idText.text = inputText;
         this.gameObject.SetActive(false);
         menuBar.SetActive(true);
+
+        CallChangeIDEvent();
     }    
+    
+    private void CallChangeIDEvent()
+    {
+        OnChangeIDEvent?.Invoke();
+    }
 }
